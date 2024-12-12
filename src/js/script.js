@@ -12,8 +12,6 @@ let page = 1
 
 async function fetchImages (text, pageNo) {
 
-
-
     const url = `https://api.unsplash.com/search/photos?query=${text}&per_page=28&page=${page}&client_id=${accessKey}`
 
     try {
@@ -43,7 +41,7 @@ async function fetchImages (text, pageNo) {
                 // Make overlay text
                 const overlayText = document.createElement('p')
                 overlayText.classList.add('overlay-text-style') 
-                overlayText.innerHTML =  image.alt_description || "Sem descrição";               
+                overlayText.innerHTML = image.alt_description || "Sem descrição";               
 
                 overlay.appendChild(overlayText)
                 imgElemet.appendChild(overlay)
@@ -75,7 +73,7 @@ form.addEventListener('submit', (e) => {
     const inputValue = searchInput.value.trim()
 
     if ( inputValue !== '' ) {
-        fetchImages(inputValue)
+        fetchImages(inputValue, page)
     }
     else {
         imagesContainer.innerHTML = '<h2>Por favor, insira algum texto</h2>'
