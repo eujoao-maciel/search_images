@@ -39,7 +39,7 @@ header form #search_container input {
     background: #eee;
 }
 
-header form #search_container .material-symbols-outlined {
+header form #search_container #search {
     position: absolute;
     right: 25px;
     bottom: 12px;

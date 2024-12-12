@@ -41,7 +41,7 @@ async function fetchImages (text, pageNo) {
                 // Make overlay text
                 const overlayText = document.createElement('p')
                 overlayText.classList.add('overlay-text-style') 
-                overlayText.innerHTML = image.alt_description || "Sem descrição";               
+                overlayText.innerHTML = image.alt_description || "Sem descrição"
 
                 overlay.appendChild(overlayText)
                 imgElemet.appendChild(overlay)
