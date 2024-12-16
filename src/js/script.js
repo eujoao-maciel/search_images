@@ -3,9 +3,7 @@ const accessKey = 'zy34wjpi7u3vBxgFuA_92i-zoid8sxTM-LUbBEY09is'
 
 const form = document.querySelector('form')
 const searchInput = document.getElementById('search_input')
-
 const imagesContainer = document.getElementById('images_container')
-
 const loadMoreBtn = document.getElementById('load_more_btn')
 
 let page = 1
@@ -73,7 +71,7 @@ form.addEventListener('submit', (e) => {
     const inputValue = searchInput.value.trim()
 
     if ( inputValue !== '' ) {
-        fetchImages(inputValue, page)
+        fetchImages(inputValue, page = 1)
     }
     else {
         imagesContainer.innerHTML = '<h2>Por favor, insira algum texto</h2>'
